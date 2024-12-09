@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="../styles.css" /> -->
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    // let bandInfo;
+
+    // Add your code here
+    const bandInfo = {
+        name:'Dube',
+        nationality: 'Nigerian',
+        genre: 'Afrobeats',
+        members:32,
+        formed: 1976,
+        split: 1998,
+        album:[
+            {name:'activism', released: 1978, name:'politcol', released: 1982},
+            {name:'freedom', released: 1986, name:'world', released: 1992}
+        ],
+        // biography:`${bandInfo.name} is a ${bandInfo.natiobality} ${bandInfo.genre} band that was active from ${bandInfo.formed} to ${bandInfo.split}. Their first album ${bandInfo.album[0]
+        // .name}, was released in ${bandInfo.album[0].released}`,
+        
+    };
+    bandInfo.biography = `${bandInfo.name} is a ${bandInfo.nationality} ${bandInfo.genre} band that was active from ${bandInfo.formed} to
+     ${bandInfo.split}. Their first album, "${bandInfo.album[0].name}", was released in ${bandInfo.album[0].released}.`;
+
+    console.log(bandInfo.biography);
+    
+    
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
